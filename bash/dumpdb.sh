@@ -16,12 +16,14 @@
 DB_USER=dbuser
 DB_PSWD=password
 
+# noms des bases de données
+dbnames=("dbname1" "dbname2" "dbname3")
+
 # definition date
 CURRENT_DATE=$(date +"%Y%m%d")
 
-# noms des bases de données
-dbnames=(dbname1 dbname2 dbname3)
-
+# Chemin de destination des sauvegardes
+DST_PATH=/path_ to_save
 
 # -------------------------------
 # sauvegarde des bases de données
@@ -31,7 +33,6 @@ do
 
   # definition du fichier
   FICHIER=$CURRENT_DATE.save.$DB_NAME.sql
-  DST_PATH=/path_ to_save
 
   echo -- Début de la sauvegarde de la base $DB_NAME vers $FICHIER
   
