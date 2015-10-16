@@ -31,11 +31,11 @@ do
 
   # definition du fichier
   FICHIER=$CURRENT_DATE.save.$DB_NAME.sql
-  PATH=/path_to_save
+  DST_PATH=/path_ to_save
 
   echo -- Début de la sauvegarde de la base $DB_NAME vers $FICHIER
   
-  /usr/bin/mysqldump -u $DB_USER -p$DB_PSWD --databases $DB_NAME > $PATH/$FICHIER
+  mysqldump -u $DB_USER -p$DB_PSWD --databases $DB_NAME > $DST_PATH/$FICHIER
   
   echo -- Fin de la sauvegarde
 
